@@ -93,7 +93,7 @@ function tambahhobby() {
 
   let newCheckBox = document.createElement("input");
   newCheckBox.type = "checkbox";
-  //   newCheckBox.id = "id" + count;
+  newCheckBox.id = "id" + count;
   newCheckBox.value = newStudent.hobby[count];
   let newSpan = document.createElement("span");
   newSpan.innerText = newCheckBox.value;
@@ -112,5 +112,15 @@ function tambahhobby() {
 
 function hapushobby() {
   let parentElement = document.getElementById("result2");
-  parentElement.removeChild(parentElement.lastChild);
+  let check = document.forms[0];
+  let value;
+  let i;
+  for (i = 0; i < check.length; i++) {
+    if (check[i].checked) {
+      value = check[i].id;
+      //   console.log(check[i]);
+      parentElement.removeChild(document.getElementById(value));
+      //   console.log(check[i].id);
+    }
+  }
 }
