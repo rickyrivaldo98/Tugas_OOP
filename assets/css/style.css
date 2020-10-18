@@ -1,0 +1,11 @@
+.container .title {
+  text-align: center;
+  /* font-size: 100px; */
+}
+
+.my-table {
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}

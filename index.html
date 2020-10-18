@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tugas Glints</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css"></link>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Tugas Glints OOP</h1>
+  <br>
+  <br>
+  <!-- Trigger the modal with a button -->
+    <div class="my-table">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">➕ Tambah Siswa</button>
+        <br><br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Date of Birthday</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Hobby</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="result">
+           
+          </tbody>
+        </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalhobby" role="dialog">
+    <div class="modal-dialog" id="isimodal">
+        
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Form Penambahan Mahasiswa</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Name</label>
+            <input id="firstName" required>
+            <input id="lastName" required>
+            </div>
+            <div class="form-group row">
+            <label class="col-sm-3 col-form-label" >Age</label>
+            <input id="inputAge" required>
+            </div>
+            <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Date of Birthday</label>
+            <input type="date" id="birthday" name="birthday" required>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Gender</label>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <input  class="form-check-input" type="radio" name ="gender" id="male" value="Male" checked>
+                            <label class="form-check-label" >
+                                male
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input  class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" >
+                                female
+                            </label>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success btn-lg" onclick="addStudent()" data-dismiss="modal">Save</button>
+          <!-- <button type="button" class="btn btn-default" >Close</button> -->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ 
+
+</div>
+
+<script type"text/javascript">
+    //class student{
+          //constructor(name){
+          //this.name = name;
+         // this.age = age;
+         // this.dateOfBirth = dateOfBirth;
+         // this.gender = gender;
+        //this.studentID = studentID;
+         // this.hobbies = hobbies;
+
+      //  }
+
+        //}
+        //function addCar(){
+          //let fullName = document.getElementById("inputName").value;
+          //let studentId = document.getElementById("stundentID").value;
+          //let biodata = new student(fullName);
+          //document.getElementById("hasil").innerHTML = biodata.name ;
+        //let fullName = document.getElementById("inputName").value;
+        //let biodata = new student(fullName);
+        //document.getElementById("hasil").innerHTML=
+        //"My " + biodata.fullName 
+        //}
+    //     class student{
+    //     constructor (firstName, lastName,age, birth, gender,studentID){
+    //         this.firstName = firstName;
+    //         this.lastName = lastName;
+    //         this.age = age;
+    //         this.birth = birth;
+    //         this.gender = gender;
+    //         this.studentID = studentID;
+    //     }
+        
+       
+    //     }
+        
+    // function setFullName(){
+    //     return `${this.firstName} + ${this.lastName}`
+    // }
+    // function setFirstName(){
+    //     let firstName= document.getElementById("firstName").value;
+    //     return firstName;
+
+    // }
+    // function setLastName(){
+    //     let lastName=document.getElementById("lastName").value;
+    //     return lastName;
+    // }
+
+    // function setAge(){
+    //     let setAge=document.getElementById("inputAge");
+    //     if (setAge.value.match(/^[0-9]+$/)){
+    //         return setAge.value;
+    //     }
+    //     else{
+    //         alert("masukkan umur dengan angka");
+    //         setAge.value="";
+    //         setAge.focus();
+    //         return false;
+    //     }
+    // }
+    // function dateOfBirth(){
+    //     let dateOfBirth=document.getElementById("birthday").value;
+    //     return dateOfBirth;
+        
+    // }
+    // function gender(){
+    //     let gender = document.querySelector('input[name= "gender"]:checked').value;
+    //     return gender;
+    // }
+    // function studentID(){
+    //     let studentID = document.getElementById("studentID").value;
+    //     return studentID;
+    // }
+    
+    // function addStudent(){
+    //     //<!--let date = new Date();-->
+    //     //<!--let year = date.get-->
+    //     //let year = 2020;
+    //     //let addName = document.getElementById("inputName").value;
+    //     //let addAge = document.getElementById("inputAge").value;
+    //     let date = new Date();
+    //     let format = date.toLocaleDateString();
+    //     let biodata =  new student(setFirstName(),setLastName(), setAge(), dateOfBirth(), gender(), studentID()) 
+    //     document.getElementById("result").innerHTML=
+    //     "Name :" + biodata.firstName + biodata.lastName + "Umur :" + biodata.age + "Date of Birth :" +biodata.birth +"gender : " +biodata.gender + " Student ID : " +biodata.studentID;
+    // }
+</script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
